@@ -13,7 +13,7 @@ map.setView([39, -96], 4);
 
 var dataFileToAdd = 'data/bike_routes.geojson';
 
-var featurelayer = L.mapbox.featurelayer().loadURL(dataFileToAdd).addTo(map);
+var featureLayer = L.mapbox.featureLayer().loadURL(dataFileToAdd).addTo(map);
 
 featureLayer.on('ready',function(){
   this.setstyle({
@@ -24,3 +24,8 @@ featureLayer.on('ready',function(){
   map.fitbounds(feature:ayer/getBounds());
 });
 
+featureLayer.on('ready',function(){
+  this.eachLayer(function(layer){
+    layer.bindPopup('Hi, Im the bike route called ' + layer.feature.properties.name)
+  }
+})
