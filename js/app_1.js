@@ -16,13 +16,13 @@ var dataFileToAdd = 'data/bike_routes.geojson';
 var featureLayer = L.mapbox.featureLayer().loadURL(dataFileToAdd).addTo(map);
 
 featureLayer.on('ready',function(){
-  this.setstyle({
+  this.setStyle({
     'color':'#ec008c'
     'fillColor':#ec008c',
     'weight':4,
     'opacity':.7
   })
-  map.fitbounds(feature:ayer/getBounds());
+  map.fitBounds(featureLayer.getBounds());
 });
 
 featureLayer.on('ready',function(){
