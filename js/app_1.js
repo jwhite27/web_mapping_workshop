@@ -11,7 +11,7 @@ var map = L.mapbox.map('map', mapId);
 //Set the view of the map to the whole US
 map.setView([39, -96], 4);
 
-var dataFileToAdd = 'data/NationalParks.geojson';
+var dataFileToAdd = 'data/DC_National_Parks.geojson';
 
 var featurelayer = L.mapbox.featurelayer().loadURL(dataFileToAdd).addTo(map);
 
