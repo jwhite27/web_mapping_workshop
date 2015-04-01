@@ -24,4 +24,4 @@ featureLayer.on('ready',function(){
   })
   map.fitbounds(feature:ayer/getBounds());
 });
-\
+
